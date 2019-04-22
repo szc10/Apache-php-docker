@@ -33,6 +33,10 @@ RUN apt-get update && \
 RUN pecl install mongodb && \
     /bin/bash -c "echo extension=mongodb.so >> /etc/php/7.0/apache2/php.ini"
 
+# Installs and Enables PHP redis driver
+RUN pecl install redis && \
+    /bin/bash -c "echo extenion=redis.so >> /etc/php/7.0/apache2/php.ini"    
+
 # Set Apache Environment variables
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
