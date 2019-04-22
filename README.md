@@ -1,12 +1,12 @@
 # Apache-PHP-for-Docker
-Latest Apache, PHP7.0 and a couple of PHP7.0 modules including MongoDB and MySQL drivers. Dockerfile for image
+Latest Apache, PHP7.0 and a couple of PHP7.0 modules including Redis,MongoDB and MySQL drivers. Dockerfile for image
 
 ## Usage:
 #### One-Time Testing: 
-- docker run --rm -p **OutgoingHTTP**:80 -p **OutgoingHTTPS**:443 -v **LocalHTMLDirectory**:/var/www/html:ro szc10/apache-php
+- docker run --rm -p **OutgoingHTTP**:80 -p **OutgoingHTTPS**:443 -v **LocalHTMLDirectory**:/var/www/html szc10/apache-php
 
 #### Background:
-- docker run -p **OutgoingHTTP**:80 -p **OutgoingHTTPS**:443 -v **LocalHTMLDirectory**:/var/www/html:ro -d szc10/apache-php
+- docker run -p **OutgoingHTTP**:80 -p **OutgoingHTTPS**:443 -v **LocalHTMLDirectory**:/var/www/html -d szc10/apache-php
 
 ### Base Image:
 - ubuntu:latest (16.04)
