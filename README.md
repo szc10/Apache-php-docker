@@ -26,6 +26,7 @@ Latest Apache, PHP7.0 and a couple of PHP7.0 modules including MongoDB and MySQL
 - APCu
 - XML
 - MBString
+- ZIP
 
 ### Ports:
 - 80 for HTTP
