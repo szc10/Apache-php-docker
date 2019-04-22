@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-MAINTAINER <Harry Zhang : zh.harry@yahoo.ca>
+FROM ubuntu:16.04
+MAINTAINER <Lemon shi : sh081042@gmail.com>
 ADD sources.list /etc/apt/sources.list
 # Installs necesseary packages
 RUN apt-get update && \
@@ -41,11 +41,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 ADD apache2.conf /etc/apache2/apache2.conf
 
 # Enables Webpages
-RUN /usr/sbin/a2ensite default-ssl && \
-
-# Enables Apache2 Modules
-    /usr/sbin/a2enmod ssl && \
-    /usr/sbin/a2enmod rewrite
+RUN /usr/sbin/a2ensite default-ssl && /usr/sbin/a2enmod ssl && /usr/sbin/a2enmod rewrite
 
 # Listen to connections on 80 and 443
 EXPOSE 80
